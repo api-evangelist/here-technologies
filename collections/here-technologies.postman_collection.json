@@ -1,0 +1,1338 @@
+{
+  "item": [
+    {
+      "id": "5a6b6e34-df13-40fc-9be2-c66de1b515ee",
+      "name": "Geocode",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ed86ca97-3d3d-4e9e-bb21-f8a0e606ff15",
+          "name": "Geocode an address",
+          "request": {
+            "name": "Geocode an address",
+            "description": {},
+            "url": {
+              "path": [
+                "geocode"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "qq",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "at",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "in",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c7982cd2-fa49-4640-98c8-b3f7dac73f60",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "geocode"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "qq",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "at",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "in",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"items\": [\n    {\n      \"title\": \"string\",\n      \"id\": \"string\",\n      \"address\": {\n        \"label\": \"string\"\n      },\n      \"position\": {\n        \"lat\": 5923.342713845878,\n        \"lng\": 5481.632482083631\n      }\n    },\n    {\n      \"title\": \"string\",\n      \"id\": \"string\",\n      \"address\": {\n        \"label\": \"string\"\n      },\n      \"position\": {\n        \"lat\": 4278.0112646316475,\n        \"lng\": 6976.449887607167\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "1e96363d-d6cf-4741-9372-7811b0671520",
+      "name": "Reverse Geocode",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "66926ad4-a9c3-4d64-9e1b-4567db55aba3",
+          "name": "Reverse geocode coordinates",
+          "request": {
+            "name": "Reverse geocode coordinates",
+            "description": {},
+            "url": {
+              "path": [
+                "revgeocode"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "at",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "1"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "25dabae3-5a20-48ea-809d-3785affa0ec6",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "revgeocode"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "at",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "1"
+                    },
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"items\": [\n    {\n      \"title\": \"string\",\n      \"id\": \"string\",\n      \"address\": {\n        \"label\": \"string\"\n      },\n      \"position\": {\n        \"lat\": 5923.342713845878,\n        \"lng\": 5481.632482083631\n      }\n    },\n    {\n      \"title\": \"string\",\n      \"id\": \"string\",\n      \"address\": {\n        \"label\": \"string\"\n      },\n      \"position\": {\n        \"lat\": 4278.0112646316475,\n        \"lng\": 6976.449887607167\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "606f9781-2bd8-4f78-86e0-7386dc2414e5",
+      "name": "Batch Jobs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "917004c4-354a-4d94-8af9-ee3a1a8ae42c",
+          "name": "List batch jobs",
+          "request": {
+            "name": "List batch jobs",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "jobs"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a043fdc3-1229-471c-b36e-80ff25ba0cf7",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "jobs"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d052f862-38d1-4c44-8f4f-190ffbe00535",
+          "name": "Create a batch job",
+          "request": {
+            "name": "Create a batch job",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "jobs"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/octet-stream"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<binary>"
+            }
+          },
+          "response": [
+            {
+              "id": "0850a1a6-ec32-441f-a55e-80ffb34af5d0",
+              "name": "Job accepted",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "jobs"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<binary>"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"requestId\": \"string\",\n  \"status\": \"running\",\n  \"statusUrl\": \"http://OmCdCizHkUWRepTpLLaGOCeRsIIyGBw.ltjwdeDn1h+sxXuNNtV2xdYLHAlDGDjbVVs5WAfSshJyz7BohjHXmqZfUUR\",\n  \"totalCount\": 5178,\n  \"processedCount\": 3163\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0207fda0-b40d-4c2d-b7ce-78f4958e1016",
+          "name": "Delete multiple jobs",
+          "request": {
+            "name": "Delete multiple jobs",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "jobs"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fc3a95ef-d6c3-41b0-a9e8-548f4674540b",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "jobs"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "58977cce-5185-4c92-9900-2185ed3e1e93",
+          "name": "Get a job's status",
+          "request": {
+            "name": "Get a job's status",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "jobs",
+                ":jobId"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "jobId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b2589797-ce32-408b-bfb6-07f799fec9bd",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "jobs",
+                    ":jobId"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "jobId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"requestId\": \"string\",\n  \"status\": \"running\",\n  \"statusUrl\": \"http://OmCdCizHkUWRepTpLLaGOCeRsIIyGBw.ltjwdeDn1h+sxXuNNtV2xdYLHAlDGDjbVVs5WAfSshJyz7BohjHXmqZfUUR\",\n  \"totalCount\": 5178,\n  \"processedCount\": 3163\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "092aa079-e866-4326-acee-7a980a7f719c",
+          "name": "Delete a specific job",
+          "request": {
+            "name": "Delete a specific job",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "jobs",
+                ":jobId"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "jobId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "00f9806f-76a8-4680-8811-d8bd2d3c9205",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "jobs",
+                    ":jobId"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "jobId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c1ac8525-7a97-4f03-a1af-2cc8eeea134c",
+          "name": "Start a job",
+          "request": {
+            "name": "Start a job",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "jobs",
+                ":jobId",
+                "start"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "jobId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c02ffde2-5049-46ab-b979-4b12523af7af",
+              "name": "Started",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "jobs",
+                    ":jobId",
+                    "start"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "jobId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8b712c17-bef2-4813-ad93-82ecb0c4f062",
+          "name": "Stop a job",
+          "request": {
+            "name": "Stop a job",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "jobs",
+                ":jobId",
+                "stop"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "jobId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5c29d362-9305-4670-b1bf-866881cd3fa3",
+              "name": "Stopped",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "jobs",
+                    ":jobId",
+                    "stop"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "jobId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "af0b2ea5-e06d-44ab-81fe-fec6c135209d",
+          "name": "Retrieve job results",
+          "request": {
+            "name": "Retrieve job results",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "jobs",
+                ":jobId",
+                "results"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "jobId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a2541ae4-df3a-44ef-9f63-538b7db4ebb7",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "jobs",
+                    ":jobId",
+                    "results"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "jobId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e30c314a-5baf-4b70-8734-356ff7c3e286",
+          "name": "Retrieve job errors",
+          "request": {
+            "name": "Retrieve job errors",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "jobs",
+                ":jobId",
+                "errors"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "jobId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "10ddb064-1d2e-4453-a302-ba534a915efe",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "jobs",
+                    ":jobId",
+                    "errors"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "jobId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "baa01c47-7a23-467c-9f98-d1eaeef4f4aa",
+      "name": "Notifications",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f6371aba-10bb-4b3f-ad00-8a2ff569adb2",
+          "name": "List notifications",
+          "request": {
+            "name": "List notifications",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "notifications"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d673c029-4fa3-4471-9fe6-aff3352a4bc2",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "notifications"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f989b0bc-a928-49c8-8a02-792284830ea7",
+          "name": "Create a notification subscription",
+          "request": {
+            "name": "Create a notification subscription",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "notifications"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"target\": \"<uri>\",\n  \"event\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c25fd982-44f0-4e90-b766-dda234704958",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "notifications"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"target\": \"<uri>\",\n  \"event\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "344c4d73-2d7c-475d-9199-3c7e85ca9acc",
+      "name": "Health",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ba34de60-7cb8-407f-9f43-2a576a6b23d1",
+          "name": "Service health",
+          "request": {
+            "name": "Service health",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "health"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "16d44a15-befd-481c-8da2-f187904bfbef",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "health"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://geocode.search.hereapi.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d1d60f5c-2919-4bb7-a0cb-6a64e5f4418e",
+    "name": "HERE Geocoding & Search API v7",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "HERE Geocoding & Search API v7 — including batch processing (Batch API v7).\nGenerated best-effort from public docs at\nhttps://docs.here.com/geocoding-and-search/.\n\n\nContact Support:\n Name: HERE Technologies",
+      "type": "text/plain"
+    }
+  }
+}
