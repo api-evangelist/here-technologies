@@ -11,7 +11,7 @@ description: >-
   and HERE Platform for enterprise data ingestion and processing. Most
   Location Services APIs are served under the *.hereapi.com domain and
   authenticated by API key, OAuth token, or app id / app code.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Maps
   - Geocoding
