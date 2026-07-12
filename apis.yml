@@ -341,6 +341,10 @@ apis:
       - type: Documentation
         url: https://www.here.com/docs/category/studio
 common:
+  - type: DomainSecurity
+    url: security/here-technologies-domain-security.yml
+  - type: Authentication
+    url: authentication/here-technologies-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/here
   - type: Website

@@ -1,0 +1,22 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/here-technologies-openapi.yml
+summary:
+  types:
+  - apiKey
+  - http
+  api_key_in:
+  - query
+schemes:
+- name: apiKey
+  type: apiKey
+  in: query
+  parameter: apiKey
+  sources:
+  - openapi/here-technologies-openapi.yml
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  sources:
+  - openapi/here-technologies-openapi.yml
