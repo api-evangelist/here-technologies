@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: HERE Geocoding & Search API v7 Batch Jobs Geocode API
+  description: 'HERE Geocoding & Search API v7 — including batch processing (Batch API v7).
+
+    Generated best-effort from public docs at
+
+    https://docs.here.com/geocoding-and-search/.
+
+    '
+  version: 7.0.0
+  contact:
+    name: HERE Technologies
+    url: https://www.here.com/developer
+servers:
+- url: https://geocode.search.hereapi.com/v1
+  description: Geocoding & Search (real-time)
+- url: https://batch.geocoder.ls.hereapi.com/6.2
+  description: Batch Geocoder (legacy)
+- url: https://batch.search.hereapi.com/v7
+  description: Batch API v7
+security:
+- apiKey: []
+- bearerAuth: []
+tags:
+- name: Geocode
+paths:
+  /geocode:
+    get:
+      tags:
+      - Geocode
+      summary: Geocode an address
+      parameters:
+      - name: q
+        in: query
+        schema:
+          type: string
+      - name: qq
+        in: query
+        schema:
+          type: string
+      - name: at
+        in: query
+        schema:
+          type: string
+      - name: in
+        in: query
+        schema:
+          type: string
+      - name: limit
+        in: query
+        schema:
+          type: integer
+          default: 20
+      - name: lang
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+components:
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+              id:
+                type: string
+              address:
+                type: object
+                properties:
+                  label:
+                    type: string
+              position:
+                type: object
+                properties:
+                  lat:
+                    type: number
+                  lng:
+                    type: number
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: query
+      name: apiKey
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
