@@ -11,7 +11,20 @@ description: >-
   and HERE Platform for enterprise data ingestion and processing. Most
   Location Services APIs are served under the *.hereapi.com domain and
   authenticated by API key, OAuth token, or app id / app code.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/here-technologies.png
 tags:
   - Maps
   - Geocoding
@@ -25,321 +38,363 @@ created: '2026-05-23'
 modified: '2026-05-23'
 specificationVersion: '0.19'
 apis:
-  - aid: here-technologies:geocoding-search
-    name: HERE Geocoding and Search API
-    description: >-
-      Forward and reverse geocoding, address lookup, place discovery, browse,
-      and details. Returns rich location data including addresses, places,
-      categories, and geometry.
-    humanURL: https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
-    baseURL: https://geocode.search.hereapi.com
-    tags:
-      - Geocoding
-      - Search
-      - Places
-      - REST API
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
-  - aid: here-technologies:autosuggest
-    name: HERE Autosuggest API
-    description: >-
-      Type-ahead search returning place and address suggestions for partial
-      queries, sharing the geocoding and search dataset.
-    humanURL: https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
-    baseURL: https://autosuggest.search.hereapi.com
-    tags:
-      - Autosuggest
-      - Search
-      - Type-ahead
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
-  - aid: here-technologies:routing
-    name: HERE Routing API v8
-    description: >-
-      Calculates routes for car, truck, bicycle, pedestrian, scooter, taxi,
-      and EV vehicles with traffic, restrictions, tolls, alternatives, and
-      turn-by-turn instructions.
-    humanURL: https://www.here.com/docs/category/routing-api-v8
-    baseURL: https://router.hereapi.com
-    tags:
-      - Routing
-      - Navigation
-      - REST API
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/routing-api-v8
-  - aid: here-technologies:matrix-routing
-    name: HERE Matrix Routing API v8
-    description: >-
-      Batch many-to-many travel time and distance matrices for fleet routing,
-      logistics, and territory planning.
-    humanURL: https://www.here.com/docs/category/matrix-routing-api-v8
-    baseURL: https://matrix.router.hereapi.com
-    tags:
-      - Matrix Routing
-      - Logistics
-      - Fleet
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/matrix-routing-api-v8
-  - aid: here-technologies:isoline-routing
-    name: HERE Isoline Routing API v8
-    description: >-
-      Computes reachable areas (isolines) by time, distance, or consumption
-      from one or more origins for site selection and service-area analysis.
-    humanURL: https://www.here.com/docs/category/isoline-routing-api-v8
-    baseURL: https://isoline.router.hereapi.com
-    tags:
-      - Isoline
-      - Routing
-      - Reachability
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/isoline-routing-api-v8
-  - aid: here-technologies:tour-planning
-    name: HERE Tour Planning API
-    description: >-
-      Vehicle routing problem (VRP) solver for fleets, with time windows,
-      capacities, breaks, skills, multi-trip, and pickup-and-delivery
-      constraints.
-    humanURL: https://www.here.com/docs/category/tour-planning
-    baseURL: https://tourplanning.hereapi.com
-    tags:
-      - VRP
-      - Fleet
-      - Optimization
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/tour-planning
-  - aid: here-technologies:waypoint-sequence
-    name: HERE Waypoint Sequence API
-    description: >-
-      Optimizes the order of intermediate stops for a single vehicle route to
-      minimize travel time or distance.
-    humanURL: https://www.here.com/docs/category/waypoint-sequence
-    baseURL: https://wps.hereapi.com
-    tags:
-      - Waypoints
-      - Optimization
-      - Routing
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/waypoint-sequence
-  - aid: here-technologies:traffic
-    name: HERE Traffic API v7
-    description: >-
-      Real-time traffic flow and incident data: speeds, jam factors, and
-      incident events for monitoring, routing, and analytics.
-    humanURL: https://www.here.com/docs/category/traffic-api-v7
-    baseURL: https://data.traffic.hereapi.com
-    tags:
-      - Traffic
-      - Flow
-      - Incidents
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/traffic-api-v7
-  - aid: here-technologies:public-transit
-    name: HERE Public Transit API
-    description: >-
-      Multi-modal public transit routing, station and stop lookup, departure
-      boards, and next-departure data for transit-enabled apps.
-    humanURL: https://www.here.com/docs/category/public-transit
-    baseURL: https://transit.hereapi.com
-    tags:
-      - Transit
-      - Public Transport
-      - Routing
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/public-transit
-  - aid: here-technologies:destination-weather
-    name: HERE Destination Weather API
-    description: >-
-      Current conditions, forecasts, and severe weather alerts at a coordinate
-      or destination, intended to enrich routing, ETAs, and travel planning.
-    humanURL: https://www.here.com/docs/category/destination-weather
-    baseURL: https://weather.hereapi.com
-    tags:
-      - Weather
-      - Forecast
-      - REST API
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/destination-weather
-  - aid: here-technologies:map-tile
-    name: HERE Map Tile API
-    description: >-
-      Raster, vector, satellite, and hybrid map tiles served via tile and
-      style endpoints, including the HERE Vector Tile API for client-side
-      rendering.
-    humanURL: https://www.here.com/docs/category/map-tile-api-v3
-    baseURL: https://maps.hereapi.com
-    tags:
-      - Tiles
-      - Rendering
-      - Maps
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/map-tile-api-v3
-  - aid: here-technologies:map-image
-    name: HERE Map Image API
-    description: >-
-      Renders static map images for a given location, route, or geometry as
-      PNG/JPEG, with markers and overlays.
-    humanURL: https://www.here.com/docs/category/map-image-api
-    baseURL: https://image.maps.hereapi.com
-    tags:
-      - Static Map
-      - Image
-      - Rendering
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/map-image-api
-  - aid: here-technologies:tracking
-    name: HERE Tracking API
-    description: >-
-      Asset tracking platform: ingests positions and telemetry from devices,
-      manages devices and projects, and exposes geofencing, history, and
-      events through REST.
-    humanURL: https://www.here.com/docs/category/tracking
-    baseURL: https://tracking.api.here.com
-    tags:
-      - Tracking
-      - IoT
-      - Telematics
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/tracking
-  - aid: here-technologies:positioning
-    name: HERE Positioning API
-    description: >-
-      High-precision indoor and outdoor positioning using Wi-Fi, cellular, and
-      Bluetooth signals.
-    humanURL: https://www.here.com/docs/category/positioning
-    baseURL: https://positioning.hereapi.com
-    tags:
-      - Positioning
-      - Indoor
-      - Wi-Fi
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/positioning
-  - aid: here-technologies:parking
-    name: HERE Parking API
-    description: >-
-      On-street and off-street parking availability, pricing, restrictions,
-      and locations.
-    humanURL: https://www.here.com/docs/category/parking
-    baseURL: https://parking.hereapi.com
-    tags:
-      - Parking
-      - Mobility
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/parking
-  - aid: here-technologies:platform-data
-    name: HERE Platform Data API
-    description: >-
-      Catalog, layer, and partition APIs for hosting and accessing
-      location-centric data products on the HERE Platform / Workspace.
-    humanURL: https://www.here.com/docs/category/data-api
-    baseURL: https://platform.here.com
-    tags:
-      - Platform
-      - Data
-      - Workspace
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/data-api
-  - aid: here-technologies:hd-live-map
-    name: HERE HD Live Map
-    description: >-
-      High-definition map product for automated driving with road geometry,
-      lanes, signs, hazards, and dynamic updates, distributed via the HERE
-      Platform.
-    humanURL: https://www.here.com/platform/automotive-services/hd-live-map
-    baseURL: https://platform.here.com
-    tags:
-      - HD Map
-      - Autonomous Driving
-      - Automotive
-    properties:
-      - type: Documentation
-        url: https://www.here.com/platform/automotive-services/hd-live-map
-  - aid: here-technologies:maps-api-javascript
-    name: HERE Maps API for JavaScript
-    description: >-
-      Browser SDK for embedding interactive maps, routing, search, and traffic
-      visualizations in web applications.
-    humanURL: https://www.here.com/docs/category/maps-api-for-javascript
-    baseURL: https://js.api.here.com
-    tags:
-      - JavaScript
-      - Web SDK
-      - Maps
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/maps-api-for-javascript
-  - aid: here-technologies:sdk-ios
-    name: HERE SDK for iOS
-    description: >-
-      Native iOS SDK with maps, routing, search, navigation, and offline
-      capabilities for mobile applications.
-    humanURL: https://www.here.com/docs/category/here-sdk-for-ios
-    baseURL: https://www.here.com/docs/category/here-sdk-for-ios
-    tags:
-      - iOS
-      - SDK
-      - Mobile
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/here-sdk-for-ios
-  - aid: here-technologies:sdk-android
-    name: HERE SDK for Android
-    description: >-
-      Native Android SDK with maps, routing, search, navigation, and offline
-      capabilities for mobile applications.
-    humanURL: https://www.here.com/docs/category/here-sdk-for-android
-    baseURL: https://www.here.com/docs/category/here-sdk-for-android
-    tags:
-      - Android
-      - SDK
-      - Mobile
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/here-sdk-for-android
-  - aid: here-technologies:sdk-flutter
-    name: HERE SDK for Flutter
-    description: >-
-      Flutter SDK wrapping HERE Mobile SDK capabilities for cross-platform
-      mobile applications.
-    humanURL: https://www.here.com/docs/category/here-sdk-for-flutter
-    baseURL: https://www.here.com/docs/category/here-sdk-for-flutter
-    tags:
-      - Flutter
-      - SDK
-      - Mobile
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/here-sdk-for-flutter
-  - aid: here-technologies:studio
-    name: HERE Studio
-    description: >-
-      Web-based mapping studio for designing custom map styles, uploading and
-      visualizing geospatial data, and publishing interactive map experiences
-      on top of the HERE Platform.
-    humanURL: https://www.here.com/docs/category/studio
-    baseURL: https://studio.here.com
-    tags:
-      - Studio
-      - Cartography
-      - Visualization
-    properties:
-      - type: Documentation
-        url: https://www.here.com/docs/category/studio
+- aid: here-technologies:geocoding-search
+  name: HERE Geocoding and Search API
+  description: >-
+    Forward and reverse geocoding, address lookup, place discovery, browse, and details. Returns rich
+    location data including addresses, places, categories, and geometry.
+  humanURL: >-
+    https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
+  baseURL: https://geocode.search.hereapi.com
+  tags:
+  - Geocoding
+  - Search
+  - Places
+  - REST API
+  properties:
+  - type: Documentation
+    url: >-
+      https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
+- aid: here-technologies:autosuggest
+  name: HERE Autosuggest API
+  description: >-
+    Type-ahead search returning place and address suggestions for partial queries, sharing the geocoding
+    and search dataset.
+  humanURL: >-
+    https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
+  baseURL: https://autosuggest.search.hereapi.com
+  tags:
+  - Autosuggest
+  - Search
+  - Type-ahead
+  properties:
+  - type: Documentation
+    url: >-
+      https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
+- aid: here-technologies:routing
+  name: HERE Routing API v8
+  description: >-
+    Calculates routes for car, truck, bicycle, pedestrian, scooter, taxi, and EV vehicles with traffic,
+    restrictions, tolls, alternatives, and turn-by-turn instructions.
+  humanURL: https://www.here.com/docs/category/routing-api-v8
+  baseURL: https://router.hereapi.com
+  tags:
+  - Routing
+  - Navigation
+  - REST API
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/routing-api-v8
+- aid: here-technologies:matrix-routing
+  name: HERE Matrix Routing API v8
+  description: >-
+    Batch many-to-many travel time and distance matrices for fleet routing, logistics, and territory planning.
+  humanURL: https://www.here.com/docs/category/matrix-routing-api-v8
+  baseURL: https://matrix.router.hereapi.com
+  tags:
+  - Matrix Routing
+  - Logistics
+  - Fleet
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/matrix-routing-api-v8
+- aid: here-technologies:isoline-routing
+  name: HERE Isoline Routing API v8
+  description: >-
+    Computes reachable areas (isolines) by time, distance, or consumption from one or more origins for
+    site selection and service-area analysis.
+  humanURL: https://www.here.com/docs/category/isoline-routing-api-v8
+  baseURL: https://isoline.router.hereapi.com
+  tags:
+  - Isoline
+  - Routing
+  - Reachability
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/isoline-routing-api-v8
+- aid: here-technologies:tour-planning
+  name: HERE Tour Planning API
+  description: >-
+    Vehicle routing problem (VRP) solver for fleets, with time windows, capacities, breaks, skills, multi-trip,
+    and pickup-and-delivery constraints.
+  humanURL: https://www.here.com/docs/category/tour-planning
+  baseURL: https://tourplanning.hereapi.com
+  tags:
+  - VRP
+  - Fleet
+  - Optimization
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/tour-planning
+- aid: here-technologies:waypoint-sequence
+  name: HERE Waypoint Sequence API
+  description: >-
+    Optimizes the order of intermediate stops for a single vehicle route to minimize travel time or distance.
+  humanURL: https://www.here.com/docs/category/waypoint-sequence
+  baseURL: https://wps.hereapi.com
+  tags:
+  - Waypoints
+  - Optimization
+  - Routing
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/waypoint-sequence
+- aid: here-technologies:traffic
+  name: HERE Traffic API v7
+  description: >-
+    Real-time traffic flow and incident data: speeds, jam factors, and incident events for monitoring,
+    routing, and analytics.
+  humanURL: https://www.here.com/docs/category/traffic-api-v7
+  baseURL: https://data.traffic.hereapi.com
+  tags:
+  - Traffic
+  - Flow
+  - Incidents
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/traffic-api-v7
+- aid: here-technologies:public-transit
+  name: HERE Public Transit API
+  description: >-
+    Multi-modal public transit routing, station and stop lookup, departure boards, and next-departure
+    data for transit-enabled apps.
+  humanURL: https://www.here.com/docs/category/public-transit
+  baseURL: https://transit.hereapi.com
+  tags:
+  - Transit
+  - Public Transport
+  - Routing
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/public-transit
+- aid: here-technologies:destination-weather
+  name: HERE Destination Weather API
+  description: >-
+    Current conditions, forecasts, and severe weather alerts at a coordinate or destination, intended
+    to enrich routing, ETAs, and travel planning.
+  humanURL: https://www.here.com/docs/category/destination-weather
+  baseURL: https://weather.hereapi.com
+  tags:
+  - Weather
+  - Forecast
+  - REST API
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/destination-weather
+- aid: here-technologies:map-tile
+  name: HERE Map Tile API
+  description: >-
+    Raster, vector, satellite, and hybrid map tiles served via tile and style endpoints, including the
+    HERE Vector Tile API for client-side rendering.
+  humanURL: https://www.here.com/docs/category/map-tile-api-v3
+  baseURL: https://maps.hereapi.com
+  tags:
+  - Tiles
+  - Rendering
+  - Maps
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/map-tile-api-v3
+- aid: here-technologies:map-image
+  name: HERE Map Image API
+  description: >-
+    Renders static map images for a given location, route, or geometry as PNG/JPEG, with markers and overlays.
+  humanURL: https://www.here.com/docs/category/map-image-api
+  baseURL: https://image.maps.hereapi.com
+  tags:
+  - Static Map
+  - Image
+  - Rendering
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/map-image-api
+- aid: here-technologies:tracking
+  name: HERE Tracking API
+  description: >-
+    Asset tracking platform: ingests positions and telemetry from devices, manages devices and projects,
+    and exposes geofencing, history, and events through REST.
+  humanURL: https://www.here.com/docs/category/tracking
+  baseURL: https://tracking.api.here.com
+  tags:
+  - Tracking
+  - IoT
+  - Telematics
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/tracking
+- aid: here-technologies:positioning
+  name: HERE Positioning API
+  description: >-
+    High-precision indoor and outdoor positioning using Wi-Fi, cellular, and Bluetooth signals.
+  humanURL: https://www.here.com/docs/category/positioning
+  baseURL: https://positioning.hereapi.com
+  tags:
+  - Positioning
+  - Indoor
+  - Wi-Fi
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/positioning
+- aid: here-technologies:parking
+  name: HERE Parking API
+  description: On-street and off-street parking availability, pricing, restrictions, and locations.
+  humanURL: https://www.here.com/docs/category/parking
+  baseURL: https://parking.hereapi.com
+  tags:
+  - Parking
+  - Mobility
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/parking
+- aid: here-technologies:platform-data
+  name: HERE Platform Data API
+  description: >-
+    Catalog, layer, and partition APIs for hosting and accessing location-centric data products on the
+    HERE Platform / Workspace.
+  humanURL: https://www.here.com/docs/category/data-api
+  baseURL: https://platform.here.com
+  tags:
+  - Platform
+  - Data
+  - Workspace
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/data-api
+- aid: here-technologies:hd-live-map
+  name: HERE HD Live Map
+  description: >-
+    High-definition map product for automated driving with road geometry, lanes, signs, hazards, and dynamic
+    updates, distributed via the HERE Platform.
+  humanURL: https://www.here.com/platform/automotive-services/hd-live-map
+  baseURL: https://platform.here.com
+  tags:
+  - HD Map
+  - Autonomous Driving
+  - Automotive
+  properties:
+  - type: Documentation
+    url: https://www.here.com/platform/automotive-services/hd-live-map
+- aid: here-technologies:maps-api-javascript
+  name: HERE Maps API for JavaScript
+  description: >-
+    Browser SDK for embedding interactive maps, routing, search, and traffic visualizations in web applications.
+  humanURL: https://www.here.com/docs/category/maps-api-for-javascript
+  baseURL: https://js.api.here.com
+  tags:
+  - JavaScript
+  - Web SDK
+  - Maps
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/maps-api-for-javascript
+- aid: here-technologies:sdk-ios
+  name: HERE SDK for iOS
+  description: >-
+    Native iOS SDK with maps, routing, search, navigation, and offline capabilities for mobile applications.
+  humanURL: https://www.here.com/docs/category/here-sdk-for-ios
+  baseURL: https://www.here.com/docs/category/here-sdk-for-ios
+  tags:
+  - iOS
+  - SDK
+  - Mobile
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/here-sdk-for-ios
+- aid: here-technologies:sdk-android
+  name: HERE SDK for Android
+  description: >-
+    Native Android SDK with maps, routing, search, navigation, and offline capabilities for mobile applications.
+  humanURL: https://www.here.com/docs/category/here-sdk-for-android
+  baseURL: https://www.here.com/docs/category/here-sdk-for-android
+  tags:
+  - Android
+  - SDK
+  - Mobile
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/here-sdk-for-android
+- aid: here-technologies:sdk-flutter
+  name: HERE SDK for Flutter
+  description: >-
+    Flutter SDK wrapping HERE Mobile SDK capabilities for cross-platform mobile applications.
+  humanURL: https://www.here.com/docs/category/here-sdk-for-flutter
+  baseURL: https://www.here.com/docs/category/here-sdk-for-flutter
+  tags:
+  - Flutter
+  - SDK
+  - Mobile
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/here-sdk-for-flutter
+- aid: here-technologies:studio
+  name: HERE Studio
+  description: >-
+    Web-based mapping studio for designing custom map styles, uploading and visualizing geospatial data,
+    and publishing interactive map experiences on top of the HERE Platform.
+  humanURL: https://www.here.com/docs/category/studio
+  baseURL: https://studio.here.com
+  tags:
+  - Studio
+  - Cartography
+  - Visualization
+  properties:
+  - type: Documentation
+    url: https://www.here.com/docs/category/studio
+- aid: here-technologies:here-technologies-batch-jobs-api
+  name: HERE Technologies Batch Jobs API
+  description: The Batch Jobs API from HERE Technologies — 6 operation(s) for batch jobs.
+  humanURL: >-
+    https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
+  baseURL: https://geocode.search.hereapi.com
+  tags:
+  - Batch Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/here-technologies-batch-jobs-api-openapi.yml
+- aid: here-technologies:here-technologies-geocode-api
+  name: HERE Technologies Geocode API
+  description: The Geocode API from HERE Technologies — 1 operation(s) for geocode.
+  humanURL: >-
+    https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
+  baseURL: https://geocode.search.hereapi.com
+  tags:
+  - Geocode
+  properties:
+  - type: OpenAPI
+    url: openapi/here-technologies-geocode-api-openapi.yml
+- aid: here-technologies:here-technologies-health-api
+  name: HERE Technologies Health API
+  description: The Health API from HERE Technologies — 1 operation(s) for health.
+  humanURL: >-
+    https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
+  baseURL: https://geocode.search.hereapi.com
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/here-technologies-health-api-openapi.yml
+- aid: here-technologies:here-technologies-notifications-api
+  name: HERE Technologies Notifications API
+  description: The Notifications API from HERE Technologies — 1 operation(s) for notifications.
+  humanURL: >-
+    https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
+  baseURL: https://geocode.search.hereapi.com
+  tags:
+  - Notifications
+  properties:
+  - type: OpenAPI
+    url: openapi/here-technologies-notifications-api-openapi.yml
+- aid: here-technologies:here-technologies-reverse-geocode-api
+  name: HERE Technologies Reverse Geocode API
+  description: The Reverse Geocode API from HERE Technologies — 1 operation(s) for reverse geocode.
+  humanURL: >-
+    https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
+  baseURL: https://geocode.search.hereapi.com
+  tags:
+  - Reverse Geocode
+  properties:
+  - type: OpenAPI
+    url: openapi/here-technologies-reverse-geocode-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/here-technologies-agentic-access.yml
