@@ -1,0 +1,22 @@
+{
+  "provider": "here-technologies",
+  "sources": [
+    "here-technologies-batch-jobs-api-openapi.yml",
+    "here-technologies-geocode-api-openapi.yml",
+    "here-technologies-health-api-openapi.yml",
+    "here-technologies-notifications-api-openapi.yml",
+    "here-technologies-reverse-geocode-api-openapi.yml"
+  ],
+  "outputs": [
+    "here-technologies-batch-jobs-api-openapi.yml",
+    "here-technologies-geocode-api-openapi.yml",
+    "here-technologies-health-api-openapi.yml",
+    "here-technologies-notifications-api-openapi.yml",
+    "here-technologies-reverse-geocode-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
