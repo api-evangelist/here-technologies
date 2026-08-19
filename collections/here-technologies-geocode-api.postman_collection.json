@@ -1,0 +1,176 @@
+{
+  "item": [
+    {
+      "id": "05fd2958-7ec9-4c3e-af5c-535b60b3e3b1",
+      "name": "Geocode",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2f758372-f6e2-4e55-9edc-d3d4711107bb",
+          "name": "Geocode an address",
+          "request": {
+            "name": "Geocode an address",
+            "description": {},
+            "url": {
+              "path": [
+                "geocode"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "qq",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "at",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "in",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f5fd2b73-352d-44e2-be8f-485a032f25a2",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "geocode"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "qq",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "at",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "in",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"items\": [\n    {\n      \"title\": \"string\",\n      \"id\": \"string\",\n      \"address\": {\n        \"label\": \"string\"\n      },\n      \"position\": {\n        \"lat\": 664.6627373451175,\n        \"lng\": 7217.426134243458\n      }\n    },\n    {\n      \"title\": \"string\",\n      \"id\": \"string\",\n      \"address\": {\n        \"label\": \"string\"\n      },\n      \"position\": {\n        \"lat\": 6977.440526814974,\n        \"lng\": 9758.019246562792\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://geocode.search.hereapi.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "0ecbf5a1-dabf-4909-915b-58f78487e6c5",
+    "name": "HERE Geocoding & Search API v7 Batch Jobs Geocode API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "HERE Geocoding & Search API v7 — including batch processing (Batch API v7).\nGenerated best-effort from public docs at\nhttps://docs.here.com/geocoding-and-search/.\n\n\nContact Support:\n Name: HERE Technologies",
+      "type": "text/plain"
+    }
+  }
+}

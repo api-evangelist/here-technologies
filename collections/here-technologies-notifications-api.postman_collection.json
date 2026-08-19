@@ -1,0 +1,212 @@
+{
+  "item": [
+    {
+      "id": "4c39474a-1da7-4f6f-bb2e-f732d7815d21",
+      "name": "Notifications",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "18aaf29d-f239-4a69-8fa1-f9540a812297",
+          "name": "List notifications",
+          "request": {
+            "name": "List notifications",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "notifications"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a9878d01-c45c-48b6-a77d-194bc6fcf957",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "notifications"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "32ad1f5a-020d-424b-a4c6-b80d9ddd161c",
+          "name": "Create a notification subscription",
+          "request": {
+            "name": "Create a notification subscription",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "notifications"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"target\": \"<uri>\",\n  \"event\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d4a54b3f-f987-470f-a51e-747d6f82f1d3",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "notifications"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"target\": \"<uri>\",\n  \"event\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://geocode.search.hereapi.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "02d60d6d-4b0b-4e30-944e-98a5b01cb1d8",
+    "name": "HERE Geocoding & Search API v7 Batch Jobs Notifications API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "HERE Geocoding & Search API v7 — including batch processing (Batch API v7).\nGenerated best-effort from public docs at\nhttps://docs.here.com/geocoding-and-search/.\n\n\nContact Support:\n Name: HERE Technologies",
+      "type": "text/plain"
+    }
+  }
+}

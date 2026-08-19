@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "HERE Geocoding & Search API v7 Batch Jobs Health API",
+    "version": "7.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "apiKey",
+      "value": "{{apiKey}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Health",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Service health",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://geocode.search.hereapi.com/v1/health"
+          },
+          "docs": "Service health"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

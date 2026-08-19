@@ -1,0 +1,119 @@
+{
+  "item": [
+    {
+      "id": "416ed490-9f4d-4f18-bb1e-6ea1ce223a8d",
+      "name": "Health",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a46c01e7-aa6e-4e5b-98d1-00ae851404d0",
+          "name": "Service health",
+          "request": {
+            "name": "Service health",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v7",
+                "health"
+              ],
+              "host": [
+                "batch",
+                "search",
+                "hereapi",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "832dce12-73f3-4ccb-bb99-dd22ecb178d0",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v7",
+                    "health"
+                  ],
+                  "host": [
+                    "batch",
+                    "search",
+                    "hereapi",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://geocode.search.hereapi.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "2fe269f0-05a6-498f-80ba-97a7aed1d91e",
+    "name": "HERE Geocoding & Search API v7 Batch Jobs Health API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "HERE Geocoding & Search API v7 — including batch processing (Batch API v7).\nGenerated best-effort from public docs at\nhttps://docs.here.com/geocoding-and-search/.\n\n\nContact Support:\n Name: HERE Technologies",
+      "type": "text/plain"
+    }
+  }
+}
