@@ -66,6 +66,10 @@ apis:
   tags:
   - Autosuggest
   - Search
+  - Typeahead
+  tags_raw:
+  - Autosuggest
+  - Search
   - Type-ahead
   properties:
   - type: Documentation
@@ -380,6 +384,8 @@ apis:
     https://www.here.com/docs/bundle/geocoding-and-search-api-developer-guide/page/README.html
   baseURL: https://geocode.search.hereapi.com
   tags:
+  - Notification
+  tags_raw:
   - Notifications
   properties:
   - type: OpenAPI
