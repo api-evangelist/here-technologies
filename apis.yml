@@ -78,7 +78,7 @@ apis:
   tags:
   - Autosuggest
   - Search
-  - Type-ahead
+  - Typeahead
   tags_raw:
   - Autosuggest
   - Search
